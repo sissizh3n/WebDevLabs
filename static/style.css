@@ -1,0 +1,53 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    /* font-optical-sizing: auto; */
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color: #5C4033;
+    padding: 5px;
+    margin: 5px
+}
+
+#webname {
+    background-color: #92ad70;
+    color: #ffffff;
+}
+
+nav a {
+    text-decoration: none;
+    color: #92ad70;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+th {
+    padding: 12px 0;
+    /* background-color: #364029; */
+    color: #ffffff;
+    width: fit-content;
+}
+
+table {
+    border: 1px;
+}
+
+table tr:nth-child(odd) {
+    background-color: #7d9560;
+}
+
+table tr:nth-child(even) {
+    background-color: #92ad70;
+}
+
+table tr:first-child td,
+table tr:first-child th {
+    background-color: #EADDCA; /* Unique background color for first row */
+    color: #5C4033; /* Unique font color for first row */
+}
+
+form * {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
