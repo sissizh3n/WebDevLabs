@@ -42,8 +42,8 @@ table tr:nth-child(even) {
 
 table tr:first-child td,
 table tr:first-child th {
-    background-color: #EADDCA; /* Unique background color for first row */
-    color: #5C4033; /* Unique font color for first row */
+    background-color: #EADDCA; 
+    color: #5C4033; 
 }
 
 form * {
