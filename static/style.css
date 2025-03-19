@@ -1,5 +1,5 @@
 * {
-    font-family: 'Courier New', monospace;
+    font-family: 'Roboto', sans-serif;
     /* font-optical-sizing: auto; */
     font-weight: bold;
     font-style: normal;
@@ -33,6 +33,14 @@ table {
     border: 1px;
 }
 
+/* table tr:nth-child(odd) {
+    background-color: #7d9560;
+} */
+
+/* table tr:nth-child(even) {
+    background-color: #92ad70;
+} */
+
 table tr:first-child td,
 table tr:first-child th {
     background-color: #723b1f; 
@@ -52,33 +60,4 @@ form * {
 
 .evenRow {
     background-color: #a7c77f;
-}
-
-/* #funList {
-    display: none;
-} */
-
-#bio {
-    margin-top: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #a7c77f;
-    color: #723b1f;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-    color: #ffffff
-}
-
-#longBio, #readLess {
-    display: none;
-}
-
-#inputInvalidMsg {
-    width: max-content;
-    margin: auto;
 }
