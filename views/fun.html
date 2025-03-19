@@ -12,9 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="../static/script.js" defer></script>
-
 </head>
-<body style="font-family: Arial">
+
+<body style="font-family: Arial" onload="addYear()">
     <header>
         <h1 id="webname">Yuxi (Sissi) Zhen</h1>
         <nav>
@@ -27,7 +27,8 @@
     
     <div class="main">
         <h2>Things I love to do for fun</h2>
-        <ul>
+        <button id="funButton" onclick="showList()">Click to see...</button>
+        <ul id="funList" style="display: none;">
             <li>Singing</li>
             <li>Dancing</li>
             <li>Thrifting</li>
@@ -37,7 +38,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Yuxi Zhen. All Rights Reserved.</p>
+        <p>Copyright &copy; <span id="copyYear"></span>Yuxi Zhen. All Rights Reserved.</p>
     </footer>
 </body>
 </html>

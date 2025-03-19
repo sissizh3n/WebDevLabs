@@ -12,11 +12,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="./static/script.js" defer></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
-<body style="font-family: Arial">
+
+<body onload="addYear()">
     <header>  
-        <!-- style="color:blue; background:lightblue" -->
         <h1 id="webname">Yuxi (Sissi) Zhen</h1>
         <nav>
             <a href="index.html">Home</a>
@@ -28,15 +28,31 @@
     
     <div class="main">
         <h2 id="greeting"></h2>
-        <img src="static/my-photo.jpg" alt="A picture of me" width="200">
-        <p id="intro">
-            Welcome to my personal Website! I'm passionate about web development and excited to share my work with you.
-        </p>
+        <img src="static/my-photo.jpg" alt="A picture of me" width="350">
+        <div>
+            <p id="shortBio">This is my short bio. King of shadow King of shades Hades
+                was King of the Underworld But he fell in love with a beautiful lady 
+                Who walked above in her mother's green fields He fell in love with 
+                Persephone Who was gathering flowers in the light of the sun</p>
+            <p id="longBio" style="display: none;">This is my long bio. King of shadow King of shades Hades
+                was King of the Underworld But he fell in love with a beautiful lady 
+                Who walked above in her mother's green fields He fell in love with 
+                Persephone Who was gathering flowers in the light of the sun And I know 
+                how it was because He was like me A soul in love with a another Singing
+                la la la la la la la...La la la la la la la...La la la la la la la...
+                La la la la la la--And you didn't know how And you didn't know why 
+                But you knew that you wanted to take her home You saw her alone there 
+                against the sky It was like she's someone you'd always known It was like 
+                you were holding the world when you held her Like yours were the arms that
+                the whole world was in And there were no words for the way that you felt 
+                So you opened your mouth and you started to sing</p>
+            <button id="readMore" onclick="toggleBio()">Read More</button>
+            <button id="readLess" onclick="toggleBio()" style="display: none;">Read Less</button>
+        </div>
     </div>
 
     <footer>
-        <p>&copy; 2025 Yuxi Zhen. All Rights Reserved.</p>
+        <p>Copyright &copy; <span id="copyYear"></span>Yuxi Zhen. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
-
