@@ -1,56 +1,26 @@
-// let x = 5;
-// let y = 7;
-// let z = x + y;
-// console.log(z);
-
-// let A = "Hello ";
-// let B = "World!";
-// let C = A + B;
-// console.log(C);
-
-// function SumNPrint(x1, x2) {
-//     let x3 = x1 + x2;
-//     return x3
-// }
-
-// console.log(SumNPrint(x, y));
-// console.log(SumNPrint(A, B));
-
-// if (C.length > z) {
-//     console.log(C)
-// } else if (C.length < z) {
-//     console.log(z)
-// } else {
-//     console.log("good job!")
-// }
-
-// let L1 = ["Watermelon", "Pineapple", "Pear", "Banana"];
-// let L2 = ["Apple", "Banana", "Kiwi", "Orange"];
-
-// function findTheBanana(L) {
-//     for (let i = 0; i < L.length; i++) {
-//         if (L[i] == "Banana") {
-//             alert("found the Banana in " + i);}
-//         }
-// }
-
-// console.log(findTheBanana(L1));
-// console.log(findTheBanana(L2));
-
-// function findTheBanana(item, index) {
-//     if (item=="Banana") {
-//         alert("found the Banana in " + index);}
-// }
-
-// L1.forEach(findTheBanana);
-// L2.forEach(findTheBanana);
+if (window.location.href.includes("index.html")) {
+    greetingFunc();
+    console.log("readLess/More jQuery is running");
+    $("#readLess").click(function() {
+        $("#longBio").hide();
+        $("#readLess").hide();
+        $("#readMore").show();
+    });
+    
+    $("#readMore").click(function() {
+        $("#longBio").show();
+        $("#readLess").show();
+        $("#readMore").hide();
+    });
+}
 
 function greetingFunc() {
+    console.log("greetingFunc is running");
     let d = new Date();
     let h = d.getHours();
     let greeting;
 
-    if (h<12) {
+    if (h>=5 && h<12){
         greeting = "Good morning";
     } else if (h<18) {
         greeting = "Good afternoon";
@@ -64,59 +34,20 @@ function greetingFunc() {
     E.innerHTML = `${greeting}, I am ${userName}`;
 }
 
-greetingFunc();
-
-// if (window.location.href.includes("index.html")) {
-//     window.onload = greetingFunc;
-// }
-
 function addYear() {
-    console.log("addYear is working");
+    console.log("addYear is running");
     var currentYear = new Date().getFullYear();
     document.getElementById("copyYear").innerHTML = currentYear;
 }
 
-function showList() {
-    console.log("showList is working")
-    document.getElementById("funList").style.display = "block";
-    document.getElementById("funButton").style.display = "none";
-}
-
-// function toggleBio() {
-//     console.log("toggleBio is working");
-//     var shortBio = document.getElementById("shortBio");
-//     var longBio = document.getElementById("longBio");
-//     var readMore = document.getElementById("readMore");
-//     var readLess = document.getElementById("readLess");
-
-//     if (longBio.style.display == "none") { // when the longBio is not there before the click, make it appear
-//         shortBio.style.display = "none";
-//         longBio.style.display = "block";
-//         readMore.style.display = "none";
-//         readLess.style.display = "block";
-//     } else { // when the longBio is there before the click, make it disappear
-//         shortBio.style.display = "block"; 
-//         longBio.style.display = "none";
-//         readMore.style.display = "block";
-//         readLess.style.display = "none";
-//     }
+// function showList() {
+//     console.log("showList is working")
+//     document.getElementById("funList").style.display = "block";
+//     document.getElementById("funButton").style.display = "none";
 // }
 
-$("#readLess").click(function() {
-    $("#longBio").hide();
-    $("#readLess").hide();
-    $("#readMore").show();
-});
-
-$("#readMore").click(function() {
-    $("#longBio").show();
-    $("#readLess").show();
-    $("#readMore").hide();
-});
-
-
 function validate() {
-    console.log("validate is working")
+    console.log("validate is running")
     var inputName = document.getElementById("name");
     var inputEmail = document.getElementById("email");
     var inputComment = document.getElementById("comment");
@@ -132,18 +63,43 @@ function validate() {
     }
 }
 
-if (window.location.href.includes("index.html")) {
-    // window.onload = addYear();
-    window.onlond = function () {
-        greetingFunc();
-    }
+function getAdvice() {
+    console.log("getAdvice is running");
+    fetch('https://api.adviceslip.com/advice')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("adviceText").innerText = data.slip.advice;
+        })
+        .catch(error => {
+            console.error("Error fetching advice:", error);
+            document.getElementById("adviceText").innerText = "Oops! Something went wrong. Try again.";
+        });
 }
-// if (window.location.href.includes("fun.html")) {
-//     window.onload = addYear();
-// }
-// if (window.location.href.includes("cv.html")) {
-//     window.onload = addYear();
-// }
-// if (window.location.href.includes("contact.html")) {
-//     window.onload = addYear();
-// }
+
+// Initialize and add the map
+let map;
+
+async function initMap() {
+  // The location of Uluru
+  const position = { lat: -25.344, lng: 131.031 };
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+  // The map, centered at Uluru
+  map = new Map(document.getElementById("map"), {
+    zoom: 10,
+    center: position,
+    mapId: "DEMO_MAP_ID",
+  });
+
+  // The marker, positioned at Uluru
+  const marker = new AdvancedMarkerElement({
+    map: map,
+    position: position,
+    title: "Uluru",
+  });
+}
+
+initMap();
