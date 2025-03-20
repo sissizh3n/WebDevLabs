@@ -12,6 +12,8 @@ if (window.location.href.includes("index.html")) {
         $("#readLess").show();
         $("#readMore").hide();
     });
+} else if (window.location.href.includes("contact.html")) {
+    initMap();
 }
 
 function greetingFunc() {
@@ -100,5 +102,3 @@ async function initMap() {
     title: "Pittsburgh",
   });
 }
-
-initMap();
