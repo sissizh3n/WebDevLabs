@@ -1,4 +1,4 @@
-if (window.location.href.includes("index.html")) {
+if (window.location.href.includes("index.html") || window.location.href=="https://sissizh3n.github.io/WebDevLabs/") {
     greetingFunc();
     console.log("readLess/More jQuery is running");
     $("#readLess").click(function() {
