@@ -25,16 +25,39 @@
         </nav>
     </header>
     
-    <div class="main">
-        <h2>Things I love to do for fun</h2>
-        <button id="funButton" onclick="showList()">Click to see...</button>
-        <ul id="funList" style="display: none;">
-            <li>Singing</li>
-            <li>Dancing</li>
-            <li>Thrifting</li>
-            <li>Cafe-hopping</li>
-            <li>Corcheting</li>
-        </ul>
+    <div class="mainLayout">
+        <div class="subLayout">
+            <div id="item1">
+                <h2>Things I love to do for fun</h2>
+                <!-- <button id="funButton" onclick="showList()">Click to see...</button> -->
+                <ul id="funList">
+                    <li>Singing</li>
+                    <li>Dancing</li>
+                    <li>Thrifting</li>
+                    <li>Cafe-hopping</li>
+                    <li>Crocheting</li>
+                </ul>
+            </div>
+            <div id="item3">
+                <iframe
+                    id="funVideo"
+                    width="500"
+                    height="300"
+                    src="https://www.youtube.com/embed/VQUlbADwcYg">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="subLayout">
+            <div id="item2"><img class="funIMG" src="../static/fun-img.jpg" width="500"></div>
+            <div id="item4">
+                <div class="container">
+                    <h2>Need some advice?</h2>
+                    <p id="adviceText">Click the button to get a random piece of advice!</p>
+                    <button onclick="getAdvice()">Get Advice</button>
+            </div>
+        </div>
+    </div>
     </div>
 
     <footer>

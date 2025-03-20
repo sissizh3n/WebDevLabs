@@ -58,9 +58,9 @@ form * {
     display: none;
 } */
 
-#bio {
+/* #bio {
     margin-top: 20px;
-}
+} */
 
 button {
     padding: 10px 20px;
@@ -81,4 +81,38 @@ button:hover {
 #inputInvalidMsg {
     width: max-content;
     margin: auto;
+}
+
+.funIMG {
+    border-radius: 100%;
+}
+
+.container {
+    border-radius: 100%; 
+    display: inline-block;
+    border-radius: 10%;
+}
+
+.mainLayout {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center; 
+    gap: 10px; 
+    padding: 10px; 
+    min-height: 100vh; 
+}
+
+.subLayout {
+    flex-direction: column;
+    width: 600px;
+}
+
+/* #adviceText {
+    width: 600;
+} */
+
+#map {
+    height: 400px; 
+    width: 400px; 
 }

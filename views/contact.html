@@ -25,7 +25,38 @@
         </nav>
     </header>
     
-    <div class="main">
+    <div class="mainLayout">
+        <div id="contactItem1">
+            <h2>Find Me</h2>
+            <!-- <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6910.802051779472!2d-79.94700152356393!3d40.44594477143493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f223cc46da6d%3A0x20fe8cbb72b0da5b!2sMorewood%20Gardens%20Parking%20Lot!5e1!3m2!1sen!2sus!4v1742416271891!5m2!1sen!2sus" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe> -->
+            
+            <div id="map"></div>
+            <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+                ({key: "AIzaSyCkRMLZo9ZwmIg5zn7yvdCaIu3PL-GTCDs", v: "weekly"});</script>
+
+            <!-- <script>
+                function initMap() {
+                    center:new google.maps.LatLng(51.508742,-0.120850)
+                    var map = new google.maps.Map(document.getElementById("map"), {
+                        zoom: 15,
+                        center: location,
+                    });
+        
+                    // // Add a marker at the location
+                    // new google.maps.marker.AdvancedMarkerElement({
+                    //     position: location,
+                    //     map: map,
+                    //     title: "Federation Square", // Tooltip text
+                    // });
+                }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkRMLZo9ZwmIg5zn7yvdCaIu3PL-GTCDs&callback=initMap"></script> -->
+        </div>
+        <div id="contactItem2">
         <h2>Contact Me</h2>
         <form action="submit_form.php" onsubmit="validate()">
             <label for="name">Name:</label>
@@ -53,7 +84,7 @@
                 <th>linkedin.com/in/yuxizhen/</th>
             </tr>
         </table>
-
+        </div>
     </div>
 
     <footer>
